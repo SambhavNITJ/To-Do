@@ -15,7 +15,7 @@ function Register() {
   useEffect(() => {
     if (state.success) {
       const timer = setTimeout(() => {
-        navigate("/login");
+        navigate("/");
       }, 2000);
       return () => clearTimeout(timer);
     }
@@ -76,7 +76,7 @@ function Register() {
         <span className="text-[#63657b] text-center">
           Already have an account?{" "}
           <Link
-            to="/login"
+            to="/"
             className="icon-hover text-primary hover:text-primary-dark hover:underline transition-colors duration-300"
           >
             Login

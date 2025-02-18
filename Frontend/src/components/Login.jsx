@@ -24,7 +24,7 @@ function Login() {
       if (response.success) {
         setState({ success: true, error: null });
         setTimeout(() => {
-          navigate("/"); // Redirect to dashboard after login
+          navigate("/todos"); // Redirect to dashboard after login
         }, 2000);
       } else {
         setState({ success: false, error: response.error });

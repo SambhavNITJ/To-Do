@@ -49,7 +49,7 @@ function Todos() {
         { withCredentials: true }
       );
       toast.success("Logged out successfully");
-      window.location.href = "/login";
+      window.location.href = "/";
     } catch (err) {
       toast.error(err.response?.data?.message || "Logout failed");
     }
