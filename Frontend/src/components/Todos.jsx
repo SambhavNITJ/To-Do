@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import Masonry from "react-masonry-css";
-import { Button } from "./ui/Button";
-import { Input } from "./ui/Input";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
 import { toast } from "react-hot-toast";
 import {
   Trash,

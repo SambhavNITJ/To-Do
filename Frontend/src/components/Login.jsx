@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Label } from "./ui/Label";
-import { Button } from "./ui/Button";
-import { Input } from "./ui/Input";
+import { Label } from "./ui/label";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../actions/userAction.js";
 
