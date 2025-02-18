@@ -3,8 +3,13 @@ import User from '../schema/user.model.js';
 import ApiError from '../utils/error.js';
 
 const verifyToken = async (req, res, next) => {
+    // console.log("Verifying token");
     try {
         if (!req.cookies || !req.cookies.token) {
+            console.log(req.cookies);
+            console.log(req.cookies.token);
+            console.log("You need to login first");
+            
             throw new ApiError(401, 'You need to login first');
         }
 

@@ -60,12 +60,13 @@ const login = async (req, res) => {
 
         const token = jwt.sign({ _id: user._id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
 
-        res.cookie('token', token, { 
-            httpOnly: true, 
-            secure: process.env.NODE_ENV === 'production', 
-        });
+        res.cookie("token", token, {
+            httpOnly: true,  // Prevents frontend JS access (for security)
+            secure: true,   // Only works over HTTPS (must be false in local testing)
+            sameSite: "none",  // Required for cross-origin requests
+          });
 
-        return res.status(200).json({ message: 'User logged in successfully' });
+        return res.status(200).json({ message: 'User logged in successfully', token : token });
 
     } catch (error) {
         if (error instanceof ApiError) {
