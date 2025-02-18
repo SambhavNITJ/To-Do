@@ -3,6 +3,10 @@ import {getAllTodos, getTodo, updateTodo, deleteTodo, addTodo} from '../controll
 import { verifyToken } from '../middlewares/verify.js';
 const router = express.Router();
 
+router.get('/check', (req, res) => {
+    res.send('Todo route is working');
+});
+
 router.get('/', verifyToken , getAllTodos);
 
 router.post('/', verifyToken, addTodo);
