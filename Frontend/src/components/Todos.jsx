@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 function Todos() {
-  const API_URL = "http://localhost:3000/api/todo";
+  const API_URL = `${import.meta.env.ITE_REACT_APP_BACKEND_BASEURL}/api/todo`;
 
   // Local state
   const [todos, setTodos] = useState([]);
@@ -34,7 +34,7 @@ function Todos() {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [newTodo]);
 
   useEffect(() => {
     fetchTodos();
@@ -44,12 +44,12 @@ function Todos() {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:3000/api/user/logout",
+        `${import.meta.env.ITE_REACT_APP_BACKEND_BASEURL}/api/user/logout`,
         {},
         { withCredentials: true }
       );
       toast.success("Logged out successfully");
-      window.location.href = "/";
+      window.location.href = "/login";
     } catch (err) {
       toast.error(err.response?.data?.message || "Logout failed");
     }

@@ -1,6 +1,6 @@
 export const register = async (formData) => {
     try {
-      const response = await fetch("http://localhost:3000/api/user/register", {
+      const response = await fetch(`${import.meta.env.ITE_REACT_APP_BACKEND_BASEURL}/api/user/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -22,7 +22,7 @@ export const register = async (formData) => {
 
   export const login = async (formData) => {
     try {
-      const response = await fetch("http://localhost:3000/api/user/login", {
+      const response = await fetch(`${import.meta.env.ITE_REACT_APP_BACKEND_BASEURL}/api/user/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
