@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
+axios.defaults.withCredentials = true;
 import Masonry from "react-masonry-css";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
