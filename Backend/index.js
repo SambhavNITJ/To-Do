@@ -1,7 +1,7 @@
 import "dotenv/config";
 import express from 'express';
-import authRoutes from './Routes/auth.js';
-import todoRoutes from './Routes/todo.js';
+import authRoutes from './routes/auth.js';
+import todoRoutes from './routes/todo.js';
 import connectDB from './db/index.js';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
