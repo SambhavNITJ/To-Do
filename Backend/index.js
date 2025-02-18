@@ -28,7 +28,7 @@ app.get('/', (req, res) => res.send('Hello World'));
 // Connect to MongoDB and start the server
 connectDB()
     .then(() => {
-        const PORT = 3000 || process.env.PORT;
+        const PORT = 3000;
         app.listen(PORT, () => {
             console.log(`✅ Server is running on ${PORT}`);
         });
