@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 function Todos() {
-  const API_URL = `${import.meta.env.ITE_REACT_APP_BACKEND_BASEURL}/api/todo`;
+  const API_URL = `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/todo`;
 
   // Local state
   const [todos, setTodos] = useState([]);
@@ -44,7 +44,7 @@ function Todos() {
   const handleLogout = async () => {
     try {
       await axios.post(
-        `${import.meta.env.ITE_REACT_APP_BACKEND_BASEURL}/api/user/logout`,
+        `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/user/logout`,
         {},
         { withCredentials: true }
       );
